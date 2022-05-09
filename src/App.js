@@ -1,17 +1,22 @@
 import React from 'react';
 import './App.css';
 import Navbar from "./components/Navbar";
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './components/pages/HomePage/Home'
+import {LangProvider} from "./components/LangProvider";
+
 
 function App() {
-  return (
-    <Router>
-        <Navbar/>
-        <Routes>
-            <Route path='/'/>
-        </Routes>
-    </Router>
-  );
+    return (
+        <Router>
+            <LangProvider>
+                <Navbar/>
+                <Routes>
+                    <Route path='/' element={<Home/>}/>
+                </Routes>
+            </LangProvider>
+        </Router>
+    );
 }
 
 export default App;

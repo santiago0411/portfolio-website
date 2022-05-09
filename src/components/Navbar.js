@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React, {useContext, useState} from 'react';
 import { Link } from 'react-router-dom';
-import { MdFingerprint } from 'react-icons/md';
+import { MdCardTravel } from 'react-icons/md';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import './Navbar.css';
 import { IconContext } from "react-icons/lib";
-import {Button} from "./Button";
+import {ImageButton} from "./ImageButton";
+import LangContext from "./LangProvider";
 
 function Navbar() {
     const [click, setClick] = useState(false);
@@ -14,12 +15,10 @@ function Navbar() {
     const closeMobileMenu = () => setClick(false);
 
     const showButton = () => {
-        if (window.innerWidth <= 960) {
-            setButton(false);
-        } else {
-            setButton(true);
-        }
+        setButton(window.innerWidth > 960);
     }
+
+    const { switchLang, currentLangData }  = useContext(LangContext);
 
     window.addEventListener("resize", showButton);
 
@@ -29,8 +28,8 @@ function Navbar() {
         <div className="navbar">
             <div className="navbar-container container">
                 <Link to='/' className="navbar-logo" onClick={closeMobileMenu}>
-                    <MdFingerprint className="navbar-icon"/>
-                    Santi's Portfolio
+                    <MdCardTravel className="navbar-icon"/>
+                    {currentLangData.Title}
                 </Link>
                 <div className="menu-icon" onClick={handleClick}>
                     {click ? <FaTimes/> : <FaBars/>}
@@ -38,30 +37,32 @@ function Navbar() {
                 <ul className={click ? 'nav-menu active' : 'nav-menu'}>
                     <li className="nav-item">
                         <Link to='/' className="nav-links" onClick={closeMobileMenu}>
-                            Home
+                            {currentLangData.HomeButton}
                         </Link>
                     </li>
                     <li className="nav-item">
                         <Link to='/projects' className="nav-links" onClick={closeMobileMenu}>
-                            Projects
+                            {currentLangData.ProjectsButton}
                         </Link>
                     </li>
                     <li className="nav-item">
                         <Link to='/about' className="nav-links" onClick={closeMobileMenu}>
-                            About
+                            {currentLangData.AboutButton}
                         </Link>
                     </li>
-{/*                    <li className="nav-btn">
-                        {button ? (
-                            <Link to='/sign-up' className="btn-link">
-                                <Button buttonStyle='btn--outline'>SIGN UP</Button>
-                            </Link>
+                    <li>
+                        { button ? (
+                            <div>
+                                <ImageButton imgPath="images/Spain-Flag.ico" onClick={() => switchLang('es-ES')}/>
+                                <ImageButton imgPath="images/United-Kingdom-Flag.ico" onClick={() => switchLang('en-US')}/>
+                            </div>
                         ) : (
-                            <Link to='/sign-up' className="btn-link" onClick={closeMobileMenu}>
-                                <Button buttonStyle='btn--outline'>SIGN UP</Button>
-                            </Link>
+                            <div>
+                                <ImageButton imgPath="images/Spain-Flag.ico" buttonSize="btn--medium"/>
+                                <ImageButton imgPath="images/United-Kingdom-Flag.ico" buttonSize="btn--medium"/>
+                            </div>
                         )}
-                    </li>*/}
+                    </li>
                 </ul>
             </div>
         </div>
@@ -70,4 +71,4 @@ function Navbar() {
     )
 }
 
-export default Navbar
+export default Navbar;
