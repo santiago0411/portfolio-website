@@ -1,6 +1,7 @@
 import React, {useContext} from "react";
 import HeroSection from "../../HeroSection";
 import LangContext from "../../LangProvider";
+import ProjectsHighlights from "../../ProjectsHighlights";
 
 function Home() {
 
@@ -9,6 +10,7 @@ function Home() {
     return (
         <>
             <HeroSection {...data.HomeIntroObj}/>
+            <ProjectsHighlights/>
         </>
     );
 }
