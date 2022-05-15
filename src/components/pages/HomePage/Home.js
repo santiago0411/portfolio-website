@@ -1,16 +1,22 @@
-import React, {useContext} from "react";
+import React from "react";
 import HeroSection from "../../HeroSection";
-import LangContext from "../../LangProvider";
 import ProjectsHighlights from "../../ProjectsHighlights";
+import { Contact } from "../../Contact";
 
-function Home() {
-
-    const data = useContext(LangContext).currentLangData;
-
+function Home(langData) {
+    const introData = {
+        langData: langData.HomeIntro,
+        componentToInsert: null
+    };
+    const contactData = {
+        langData: langData.ContactInfo,
+        componentToInsert: <Contact {...langData.ContactInfo}/>
+    };
     return (
         <>
-            <HeroSection {...data.HomeIntroObj}/>
-            <ProjectsHighlights/>
+            <HeroSection {...introData}/>
+            <ProjectsHighlights {...langData.ProjectHighlights}/>
+            <HeroSection id="contact" {...contactData}/>
         </>
     );
 }

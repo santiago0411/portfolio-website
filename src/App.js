@@ -1,21 +1,24 @@
-import React from 'react';
 import './App.css';
-import Navbar from "./components/Navbar";
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+import { useContext } from 'react';
+import Navbar from "./components/Navbar";
 import Home from './components/pages/HomePage/Home'
-import {LangProvider} from "./components/LangProvider";
+import LangContext from "./components/LangProvider";
+import {Footer} from "./components/pages/Footer/Footer";
 
 
 function App() {
+    const { currentLangData } = useContext(LangContext);
     return (
-        <Router>
-            <LangProvider>
-                <Navbar/>
+        <>
+            <Router>
+                <Navbar {...currentLangData.NavBar}/>
                 <Routes>
-                    <Route path='/' element={<Home/>}/>
+                    <Route path='/' element={<Home {...currentLangData}/>}/>
                 </Routes>
-            </LangProvider>
-        </Router>
+                <Footer {...currentLangData.Footer}/>
+            </Router>
+        </>
     );
 }
 

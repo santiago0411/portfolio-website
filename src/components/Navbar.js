@@ -4,10 +4,9 @@ import { MdCardTravel } from 'react-icons/md';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import './Navbar.css';
 import { IconContext } from "react-icons/lib";
-import {ImageButton} from "./ImageButton";
 import LangContext from "./LangProvider";
 
-function Navbar() {
+function Navbar(langData) {
     const [click, setClick] = useState(false);
     const [button, setButton] = useState(true);
 
@@ -18,7 +17,7 @@ function Navbar() {
         setButton(window.innerWidth > 960);
     }
 
-    const { switchLang, currentLangData }  = useContext(LangContext);
+    const { lang, switchLang }  = useContext(LangContext);
 
     window.addEventListener("resize", showButton);
 
@@ -29,7 +28,7 @@ function Navbar() {
             <div className="navbar-container container">
                 <Link to='/' className="navbar-logo" onClick={closeMobileMenu}>
                     <MdCardTravel className="navbar-icon"/>
-                    {currentLangData.Title}
+                    {langData.Title}
                 </Link>
                 <div className="menu-icon" onClick={handleClick}>
                     {click ? <FaTimes/> : <FaBars/>}
@@ -37,32 +36,23 @@ function Navbar() {
                 <ul className={click ? 'nav-menu active' : 'nav-menu'}>
                     <li className="nav-item">
                         <Link to='/' className="nav-links" onClick={closeMobileMenu}>
-                            {currentLangData.HomeButton}
+                            {langData.HomeButton}
                         </Link>
                     </li>
                     <li className="nav-item">
                         <Link to='/projects' className="nav-links" onClick={closeMobileMenu}>
-                            {currentLangData.ProjectsButton}
+                            {langData.ProjectsButton}
                         </Link>
                     </li>
                     <li className="nav-item">
                         <Link to='/about' className="nav-links" onClick={closeMobileMenu}>
-                            {currentLangData.AboutButton}
+                            {langData.AboutButton}
                         </Link>
                     </li>
-                    <li>
-                        { button ? (
-                            <div>
-                                <ImageButton imgPath="images/Spain-Flag.ico" onClick={() => switchLang('es-ES')}/>
-                                <ImageButton imgPath="images/United-Kingdom-Flag.ico" onClick={() => switchLang('en-US')}/>
-                            </div>
-                        ) : (
-                            <div>
-                                <ImageButton imgPath="images/Spain-Flag.ico" buttonSize="btn--medium"/>
-                                <ImageButton imgPath="images/United-Kingdom-Flag.ico" buttonSize="btn--medium"/>
-                            </div>
-                        )}
-                    </li>
+                    <div className="flagSection">
+                        <img id="btnFlag" className={lang === "es" ? "active" : ""} width="32px" height="32px" src={process.env.PUBLIC_URL + "/images/SP-Flag.ico"} onClick={() => switchLang('es')} alt="spainFlag"/>
+                        <img id="btnFlag" className={lang === "en" ? "active" : ""} width="32px" height="32px" src={process.env.PUBLIC_URL + "/images/UK-Flag.ico"} onClick={() => switchLang('en')} alt="ukFlag"/>
+                    </div>
                 </ul>
             </div>
         </div>

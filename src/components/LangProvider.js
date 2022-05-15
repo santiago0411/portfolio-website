@@ -1,5 +1,5 @@
 import React, { useLayoutEffect, useState } from "react";
-import {appData} from "./pages/HomePage/Data";
+import {appData} from "../Data";
 
 const LangContext = React.createContext({
    lang: '',
@@ -21,14 +21,11 @@ export function LangProvider(props) {
     }, [lang]);
 
     const switchLang = ln => {
-        switch (ln) {
-            case 'en-US':
-            case 'es-ES':
-                setLang(ln);
-                break;
-            default:
-                setLang('en-US');
-        }
+        if (ln.startsWith('es'))
+            setLang('es');
+        else // if (ln.startsWith('en'))
+            setLang('en');
+
         window.localStorage.setItem(languageKey, ln);
     };
 
