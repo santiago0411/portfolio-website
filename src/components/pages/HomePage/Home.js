@@ -16,7 +16,7 @@ function Home(langData) {
         <>
             <HeroSection {...introData}/>
             <ProjectsHighlights {...langData.ProjectHighlights}/>
-            <HeroSection id="contact" {...contactData}/>
+            <HeroSection {...contactData}/>
         </>
     );
 }

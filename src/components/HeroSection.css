@@ -1,6 +1,7 @@
 .home__hero-section {
     color: #fff;
     padding: 160px 0;
+    background-color: #E2DED0;
 }
 
 .home__hero-row {
@@ -26,7 +27,7 @@
 }
 
 .home__hero-text-wrapper {
-    max-width: 540px;
+    max-width: 800px;
     padding-top: 0;
     padding-bottom: 60px;
 }
@@ -54,11 +55,11 @@
 }
 
 .darkBg {
-    background-color: #1c2237;
+    background-color: #4E4F50;
 }
 
 .home__hero-subtitle {
-    max-width: 440px;
+    max-width: 800px;
     margin-bottom: 35px;
     font-size: 18px;
     line-height: 24px;
@@ -93,6 +94,11 @@ img {
 @media screen and (max-width: 768px) {
     .home__hero-text-wrapper {
         padding-bottom: 65px;
+    }
+
+    .home__hero-img-wrapper {
+        display: flex;
+        justify-content: center;
     }
 
     .col {

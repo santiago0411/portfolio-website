@@ -8,7 +8,7 @@ import LangContext from "./LangProvider";
 
 function Navbar(langData) {
     const [click, setClick] = useState(false);
-    const [button, setButton] = useState(true);
+    const [_, setButton] = useState(true);
 
     const handleClick = () => setClick(!click);
     const closeMobileMenu = () => setClick(false);

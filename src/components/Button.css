@@ -66,7 +66,13 @@
 }
 
 .blue {
-    background-color: #276afb;
+    background-color: #647C90;
+    color: #fff;
+    border: none;
+}
+
+.blue-grey {
+    background-color: #647C90;
     color: #fff;
     border: none;
 }
@@ -85,12 +91,12 @@
 
 .primary {
     background-color: #242424;
-    color: #fff;
+    color: #E2DED0;
     border: none;
 }
 
 .primary:hover {
-    background-color: #fff;
+    background-color: #E2DED0;
     color: #242424;
     border: none;
 }

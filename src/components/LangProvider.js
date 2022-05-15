@@ -12,7 +12,19 @@ export default LangContext;
 export function LangProvider(props) {
     const languageKey = 'appUILang';
 
-    const [lang, setLang] =  useState(window.localStorage.getItem(languageKey) || window.navigator.language);
+    const selectInitialState = () => {
+        if (languageKey in window.localStorage)
+            return window.localStorage.getItem(languageKey);
+
+        let lang = window.navigator.language.substring(0, 2);
+        if (lang !== 'en' || lang !== 'es')
+            lang = 'en';
+
+        window.localStorage.setItem(languageKey, lang);
+        return lang;
+    };
+
+    const [lang, setLang] =  useState(selectInitialState());
 
     useLayoutEffect(() => {
         const selectedLang = window.localStorage.getItem(languageKey);
@@ -21,11 +33,7 @@ export function LangProvider(props) {
     }, [lang]);
 
     const switchLang = ln => {
-        if (ln.startsWith('es'))
-            setLang('es');
-        else // if (ln.startsWith('en'))
-            setLang('en');
-
+        setLang(ln);
         window.localStorage.setItem(languageKey, ln);
     };
 

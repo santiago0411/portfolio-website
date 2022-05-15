@@ -19,7 +19,7 @@ function HeroSection({langData, componentToInsert = null}) {
                                 <h1 className={langData.LightText ? 'heading' : 'heading dark'}>{langData.Headline}</h1>
                                 <p className={langData.LightTextDesc ? 'home__hero-subtitle' : 'home__hero-subtitle dark'}>{langData.Description}</p>
                                 <Link to={langData.ButtonRedirect}>
-                                    <Button buttonSize='btn--wide' buttonColor='blue'>{langData.ButtonLabel}</Button>
+                                    <Button buttonSize='btn--wide' buttonColor='blue-grey'>{langData.ButtonLabel}</Button>
                                 </Link>
                             </div>
                         </div>

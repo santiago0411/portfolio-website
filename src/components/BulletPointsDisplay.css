@@ -1,0 +1,23 @@
+.bp__heading {
+    color: #E2DED0;
+    font-size: 48px;
+    line-height: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+}
+
+.dark-heading {
+    color: #274472;
+}
+
+.dark-point {
+    color: #242424;
+}
+
+.bullet-points {
+    margin-bottom: 10px;
+    font-size: 30px;
+    margin-right: auto;
+    margin-left: auto;
+}

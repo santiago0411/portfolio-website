@@ -3,7 +3,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background: #fafafa;
+    background: #E2DED0;
 }
 
 .projects__container {
@@ -21,8 +21,8 @@
 
 .projects__heading {
     margin-bottom: 24px;
-    display: flex;
-    justify-content: center;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 @media screen and (max-width: 960px) {
