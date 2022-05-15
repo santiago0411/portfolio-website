@@ -10,9 +10,7 @@ export const Footer = (langData) => {
                 <div className="social-media-wrap">
                     <small className="website-rights">{langData.Copyright}</small>
                     <div className="social-icons">
-                        <Link className="social-icon-link" to={{ pathname: langData.LinkedInTo }} target="_blank" aria-label="LinkedIn">
-                            <FaLinkedin/>
-                        </Link>
+                        <FaLinkedin className="social-icon-link" onClick={() => window.open(langData.LinkedInTo, '_blank')}/>
                     </div>
                 </div>
             </section>
