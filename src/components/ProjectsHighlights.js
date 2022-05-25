@@ -13,7 +13,7 @@ function ProjectsHighlights(langData) {
     }
 
     const projectTwo = {
-        cardTo: "/",
+        cardTo: langData.ProjectTwo.ButtonTo,
         cardTitle: langData.ProjectTwo.Title,
         cardDescription: langData.ProjectTwo.Description,
         buttonText: langData.ProjectHighlightButtonText

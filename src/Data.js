@@ -52,7 +52,8 @@ const projectHighlightsEng = {
   ProjectTwo: {
     Title: "Simple Networking",
     Image: "",
-    Description: "Simple Server-Client(s) tcp and udp implementations to send and receive any type of packets."
+    Description: "A simple server-client(s) TCP and UDP implementations to send and receive any type of messages. Based on my network implementation for my RPG Game Project.",
+    ButtonTo: "https://github.com/santiago0411/SimpleNetworking"
   }
 }
 
@@ -68,7 +69,8 @@ const projectHighlightsEs = {
   ProjectTwo: {
     Title: "Simple Networking",
     Image: "",
-    Description: "Una simple implementación de server y cliente(s) tcp y udp para intercambiar cualquier tipo de mensajes."
+    Description: "Una simple implementación de server y cliente(s) TCP y UDP para intercambiar cualquier tipo de mensajes. Basado en mi implementación de network de mi juego RPG.",
+    ButtonTo: "https://github.com/santiago0411/SimpleNetworking"
   }
 }
 

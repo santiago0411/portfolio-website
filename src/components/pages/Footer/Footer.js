@@ -9,7 +9,7 @@ export const Footer = (langData) => {
                 <div className="social-media-wrap">
                     <small className="website-rights">{langData.Copyright}</small>
                     <div className="social-icons">
-                        <FaLinkedin className="social-icon-link" onClick={() => window.open(langData.LinkedInTo, '_blank')}/>
+                        <FaLinkedin className="social-icon-link" onClick={() => window.open(langData.LinkedInTo, '_blank', 'noopener,noreferrer')}/>
                     </div>
                 </div>
             </section>
