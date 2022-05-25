@@ -1,7 +1,6 @@
 import React from "react";
 import './Footer.css';
-import { Link } from 'react-router-dom';
-import { FaLinkedin} from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
 
 export const Footer = (langData) => {
     return (

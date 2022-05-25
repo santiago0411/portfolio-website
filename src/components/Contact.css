@@ -47,6 +47,10 @@
     width: 270px;
 }
 
+#successMessage{
+    color: green;
+}
+
 #btnContact {
     display: block;
     margin: auto;
