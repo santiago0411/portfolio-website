@@ -3,7 +3,7 @@ import "./Card.css"
 import { Button } from "./Button";
 import { FaFire } from "react-icons/fa";
 
-function Card({ cardTo, cardTitle, cardDescription, buttonText }) {
+function Card({ cardTo, toNewTab, cardTitle, cardDescription, buttonText }) {
     return (
         <>
             <div className="container-card">
@@ -13,7 +13,12 @@ function Card({ cardTo, cardTitle, cardDescription, buttonText }) {
                     </div>
                     <h3>{cardTitle}</h3>
                     <p className="container-description">{cardDescription}</p>
-                    <Button buttonSize="btn--wide" buttonColor="primary" onClick={() => window.open(cardTo, '_blank', 'noopener,noreferrer')}>
+                    <Button buttonSize="btn--wide" buttonColor="primary" onClick={
+                        toNewTab ?
+                            () => window.open(cardTo, '_blank', 'noopener,noreferrer')
+                        :
+                            () => window.location.href=`#${cardTo}`
+                    }>
                         {buttonText}
                     </Button>
                 </div>

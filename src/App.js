@@ -4,6 +4,7 @@ import { useContext } from 'react';
 import Navbar from "./components/Navbar";
 import Home from './components/pages/HomePage/Home'
 import About from "./components/pages/About/About";
+import ProjectAO from "./components/pages/ProjectAO/ProjectAO";
 import LangContext from "./components/LangProvider";
 import { Footer } from "./components/pages/Footer/Footer";
 
@@ -17,6 +18,7 @@ function App() {
                 <Routes>
                     <Route path='/' element={<Home {...currentLangData.Home}/>}/>
                     <Route path='/about' element={<About {...currentLangData.About}/>}/>
+                    <Route path='/ao-project' element={<ProjectAO {...currentLangData}/>}/>
                 </Routes>
                 <Footer {...currentLangData.Footer}/>
             </Router>

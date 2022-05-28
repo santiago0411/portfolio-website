@@ -6,7 +6,8 @@ import { IconContext } from "react-icons/lib";
 function ProjectsHighlights(langData) {
 
     const mainProject = {
-        cardTo: "/",
+        cardTo: "/ao-project",
+        toNewTab: false,
         cardTitle: langData.ProjectOne.Title,
         cardDescription: langData.ProjectOne.Description,
         buttonText: langData.ProjectHighlightButtonText
@@ -14,6 +15,7 @@ function ProjectsHighlights(langData) {
 
     const projectTwo = {
         cardTo: langData.ProjectTwo.ButtonTo,
+        toNewTab: true,
         cardTitle: langData.ProjectTwo.Title,
         cardDescription: langData.ProjectTwo.Description,
         buttonText: langData.ProjectHighlightButtonText

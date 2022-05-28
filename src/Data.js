@@ -22,7 +22,8 @@ const homeIntroEng = {
   ButtonLabel: "Learn More",
   ButtonRedirect: "/about",
   ImgStart: "",
-  Img: "images/rohnKermit.png",
+  //Img: "portfolio-website/images/rohnKermit.png",
+  Img: "",
   Alt: ""
 }
 
@@ -36,7 +37,7 @@ const homeIntroEs = {
   ButtonLabel: "Ver Más",
   ButtonRedirect: "/about",
   ImgStart: "",
-  Img: "images/rohnKermit.png",
+  Img: "",
   Alt: ""
 }
 
@@ -64,7 +65,8 @@ const projectHighlightsEs = {
   ProjectOne: {
     Title: "Proyecto AO",
     Image: "",
-    Description: "Versión remasterizada de un viejo juego 2D multijugador de Argentina. Rehecho por completo utilizando Unity y C#."
+    Description: "Versión remasterizada de un viejo juego 2D multijugador de Argentina. Rehecho por completo utilizando Unity y C#.",
+    LinkTo: "ao-project"
   },
   ProjectTwo: {
     Title: "Simple Networking",
