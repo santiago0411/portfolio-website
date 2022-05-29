@@ -57,10 +57,10 @@ export function defaultSecondColumn(props) {
                 { props.AllowZoomImage
                     ?
                     <Zoom>
-                        <img src={langData.Img} alt={langData.Alt} className="home__hero-img"/>
+                        <img src={process.env.PUBLIC_URL + langData.Img} alt={langData.Alt} className="home__hero-img"/>
                     </Zoom>
                     :
-                    <img src={langData.Img} alt={langData.Alt} className="home__hero-img"/>
+                    <img src={process.env.PUBLIC_URL + langData.Img} alt={langData.Alt} className="home__hero-img"/>
                 }
             </div>
         </div>

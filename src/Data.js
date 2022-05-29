@@ -8,8 +8,6 @@ const esAStarLink = "https://es.wikipedia.org/wiki/Algoritmo_de_b%C3%BAsqueda_A*
 const sqlKataLink = "https://sqlkata.com/";
 const dapperLink = "https://github.com/DapperLib/Dapper";
 
-const auxPath = "portfolio-website/";
-
 const navBarEng = {
   Title: "My Portfolio",
   HomeButton: "Home",
@@ -182,17 +180,17 @@ const projectAoEng = {
   Intro: {
     Headline: "AO PROJECT",
     Description: `Remake of an old popular Argentinean game called <a href=${engWikiAoLink} target='_blank' rel='noopener noreferrer'><nobr>Argentum Online</nobr></a>.<br/> The original game is open source and was coded using Visual Basic 6.0. Thanks to this game I discovered the world of programming over 10 years ago, which led me many years later by interest and sheer curiosity to recreate this game from scratch using Unity and only keeping the original graphics. The game is an open-world RPG in which you can fight against creatures to level up your character as well as against other players.<br/>The source code of this project is not open to the public for the time being, although I am willing to disclose parts of it as per request.`,
-    Img: `${auxPath}images/AO.gif`,
+    Img: "/images/AO.gif"
   },
   Network: {
     Headline: "NETWORKING",
     Description: `The networking module is very similar to my <a href=${simpleNetworkingGitLink} target='_blank' rel='noopener noreferrer'><nobr>SimpleNetworking</nobr></a> library. A message is sent by either server or client, and it is put on a thread safe queue after arriving. Periodically the main thread collects all the actions in the queue and executes them.`,
-    Img: `${auxPath}images/network-flowchart.png`
+    Img: "/images/network-flowchart.png"
   },
   Pathfinding : {
     Headline: "A* PATH FINDING",
     Description: `Hostile NPCs use an implementation of the <a href=${engAStarLink} target='_blank' rel='noopener noreferrer'><nobr>A* algorithm</nobr></a> to find the shortest available path to their target. As the NPC chases its target if it moves away from its original position new paths are requested. If the target happens to run out of the NPC's vision range or the NPC gets too far away from its original position, it will request a path towards that original position and enter a 'leashing' state in which it cannot be attacked until it reaches its destination.<br/>This gif shows the algorithm being updated in real time, drawing circles in each node of the path and updating the path as the player runs away. When the NPC reaches more than 15 tiles of distance from its original spawn point it enters the 'leashing' state and runs back to where it was spawned.`,
-    Img: `${auxPath}images/PathFinding.gif`,
+    Img: "/images/PathFinding.gif",
     CodeBlockHeading: "A* Algorithm Implementation"
   },
   Database: {
@@ -205,17 +203,17 @@ const projectAoEs = {
   Intro: {
     Headline: "PROYECTO AO",
     Description: `Recreación de un viejo videojuego popular Argentino llamado <a href=${esWikiAoLink} target='_blank' rel='noopener noreferrer'><nobr>Argentum Online</nobr></a>.<br/> El juego original es open source y fue programado en Visual Basic 6.0. Gracias a este juego descubrí el mundo de la programación hace ya más de 10 años, lo cual luego de muchos años por interés y curiosidad me llevo a recrear el juego por completo utilizando Unity y solo manteniendo los gráficos originales. El juego es un RPG mundo abierto en el que puedes luchar tanto contra criaturas para mejorar tu nivel así también como contra otros jugadores. El código de este proyecto no está disponible al público por el momento, aunque puedo compartir partes si es pedido.`,
-    Img: `${auxPath}images/AO.gif`,
+    Img: "/images/AO.gif"
   },
   Network: {
     Headline: "NETWORKING",
     Description: `El módulo de red es muy similar a mi librería <a href=${simpleNetworkingGitLink} target='_blank' rel='noopener noreferrer'><nobr>SimpleNetworking</nobr></a>. Un mensaje es envidado por el servidor o un cliente, y es puesto en cola para procesar luego de ser recibido. Periodicamente el thread principal recollecta todas las acciones en cola y las ejecuta.`,
-    Img: `${auxPath}images/network-flowchart.png`,
+    Img: "/images/network-flowchart.png",
   },
   Pathfinding : {
     Headline: "A* PATH FINDING",
     Description: `Los NPCs hostiles utilizan una implementación del <a href=${esAStarLink} target='_blank' rel='noopener noreferrer'><nobr>algoritmo A*</nobr></a> para encontrar el camino más corto disponible hacia su objetivo. Mientras el NPC persigue a su objetivo si este se mueve, nuevos caminos son buscados para seguir persiguiendolo. Si el objetivo se aleja del área de visión del NPC o el NPC se aleja demasiado de su posición original, el NPC entrará en un estado de 'leashing' en el que pedirá un camino a su posición original y no podrá ser atacado hasta que llegue a ella.<br/>Este gif muestra el algoritmo siendo actualizado en tiempo real, dibujando circulos en cada nodo del camino mientras el jugador se aleja. Cuando el NPC se aleja más de 15 posiciones de su lugar original entra en el estado de 'leashing' y vuelve al lugar en donde se encontraba.`,
-    Img: `${auxPath}images/PathFinding.gif`,
+    Img: "/images/PathFinding.gif",
     CodeBlockHeading: "Implementación del Algoritmo A*"
   },
   Database: {

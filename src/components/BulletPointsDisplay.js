@@ -2,7 +2,6 @@ import React from "react";
 import './BulletPointsDisplay.css';
 
 export const BulletPointsDisplay = ({langData, lightBg = false}) => {
-    console.log(langData)
     return (
         <section>
             <div className={lightBg ? "bp__heading dark-heading" : "bp__heading"}>{langData.Heading}</div>
