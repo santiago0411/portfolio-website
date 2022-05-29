@@ -1,30 +1,32 @@
 import React from "react";
-import HeroSection from "../../HeroSection";
+import HeroSection, {HeroSectionProps} from "../../HeroSection";
 import {BulletPointsDisplay} from "../../BulletPointsDisplay";
 
 function About(langData) {
-    const educationData = {
-        langData: langData.Education,
-        componentToInsert: <BulletPointsDisplay {...langData.Education}/>
-    }
-    const workData = {
-        langData: langData.Work,
-        componentToInsert: <BulletPointsDisplay {...langData.Work}/>
-    }
-    const skillsData = {
-        langData: langData.Skills,
-        componentToInsert: <BulletPointsDisplay {...langData.Skills}/>
-    }
-    const languagesData = {
-        langData: langData.Languages,
-        componentToInsert: <BulletPointsDisplay {...langData.Languages}/>
-    }
+    const educationProps = new HeroSectionProps(langData.Education);
+    educationProps.SingleColumn = true;
+    educationProps.FirstColumnComponent = <BulletPointsDisplay langData={langData.Education}/>;
+
+    const workProps = new HeroSectionProps(langData.Work);
+    workProps.SingleColumn = true;
+    workProps.FirstColumnComponent = <BulletPointsDisplay langData={langData.Work} lightBg={true}/>;
+    workProps.LightBg = true;
+
+    const skillsProps = new HeroSectionProps(langData.Skills);
+    skillsProps.SingleColumn = true;
+    skillsProps.FirstColumnComponent = <BulletPointsDisplay langData={langData.Skills}/>;
+
+    const languagesProps = new HeroSectionProps(langData.Languages);
+    languagesProps.SingleColumn = true;
+    languagesProps.FirstColumnComponent = <BulletPointsDisplay langData={langData.Languages} lightBg={true}/>;
+    languagesProps.LightBg = true;
+
     return (
         <>
-            <HeroSection {...educationData}/>
-            <HeroSection {...workData}/>
-            <HeroSection {...skillsData}/>
-            <HeroSection {...languagesData}/>
+            <HeroSection {...educationProps}/>
+            <HeroSection {...workProps}/>
+            <HeroSection {...skillsProps}/>
+            <HeroSection {...languagesProps}/>
         </>
     );
 }

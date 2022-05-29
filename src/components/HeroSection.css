@@ -26,6 +26,11 @@
     flex-basis: 50%;
 }
 
+.threeCol {
+    max-width: 33%;
+
+}
+
 .home__hero-text-wrapper {
     max-width: 800px;
     padding-top: 0;

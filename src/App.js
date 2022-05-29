@@ -18,7 +18,7 @@ function App() {
                 <Routes>
                     <Route path='/' element={<Home {...currentLangData.Home}/>}/>
                     <Route path='/about' element={<About {...currentLangData.About}/>}/>
-                    <Route path='/ao-project' element={<ProjectAO {...currentLangData}/>}/>
+                    <Route path='/ao-project' element={<ProjectAO {...currentLangData.ProjectAO}/>}/>
                 </Routes>
                 <Footer {...currentLangData.Footer}/>
             </Router>

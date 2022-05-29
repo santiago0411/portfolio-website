@@ -40,7 +40,7 @@ function Navbar(langData) {
                         </Link>
                     </li>
                     <li className="nav-item">
-                        <Link to='/projects' className="nav-links" onClick={closeMobileMenu}>
+                        <Link to='/ao-project' className="nav-links" onClick={closeMobileMenu}>
                             {langData.ProjectsButton}
                         </Link>
                     </li>

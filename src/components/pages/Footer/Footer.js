@@ -1,6 +1,6 @@
 import React from "react";
 import './Footer.css';
-import { FaLinkedin } from "react-icons/fa";
+import { FaLinkedin, FaGithub } from "react-icons/fa";
 
 export const Footer = (langData) => {
     return (
@@ -10,6 +10,7 @@ export const Footer = (langData) => {
                     <small className="website-rights">{langData.Copyright}</small>
                     <div className="social-icons">
                         <FaLinkedin className="social-icon-link" onClick={() => window.open(langData.LinkedInTo, '_blank', 'noopener,noreferrer')}/>
+                        <FaGithub className="social-icon-link" onClick={() => window.open(langData.GithubTo, '_blank', 'noopener,noreferrer')}/>
                     </div>
                 </div>
             </section>

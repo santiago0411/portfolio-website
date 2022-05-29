@@ -1,0 +1,9 @@
+.codeBlock {
+    width: 50%;
+}
+
+@media screen and (max-width: 768px) {
+    .codeBlock {
+        width: 100%;
+    }
+}
