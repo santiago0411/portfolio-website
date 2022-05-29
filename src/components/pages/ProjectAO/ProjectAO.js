@@ -4,6 +4,7 @@ import HeroSection, { HeroSectionProps } from "../../HeroSection";
 import { CodeBlock, vs2015 } from "react-code-blocks";
 import { PathFindingCode } from '../../../constants/PathFinding';
 import { DatabaseCode } from '../../../constants/Database';
+import UseWindowDimensions from "../../WindowSize";
 
 function ProjectAO(langData) {
 
@@ -66,6 +67,7 @@ function pathFindingCodeBlock(heading) {
 }
 
 function databaseCodeBlock() {
+    const windowWidth = UseWindowDimensions().Width;
     return (
         <CodeBlock
             className="codeBlock"
@@ -76,7 +78,7 @@ function databaseCodeBlock() {
             customStyle={{
                 display: 'flex',
                 height: '50vh',
-                width: '100%',
+                width: windowWidth > 768 ? '50%' : '100%',
                 overflow: 'scroll'
             }}
         />
