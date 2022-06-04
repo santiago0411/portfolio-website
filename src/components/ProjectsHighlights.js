@@ -6,7 +6,7 @@ import { IconContext } from "react-icons/lib";
 function ProjectsHighlights(langData) {
 
     const mainProject = {
-        cardTo: "/ao-project",
+        cardTo: langData.ProjectOne.LinkTo,
         toNewTab: false,
         cardTitle: langData.ProjectOne.Title,
         cardDescription: langData.ProjectOne.Description,
@@ -14,11 +14,19 @@ function ProjectsHighlights(langData) {
     }
 
     const projectTwo = {
-        cardTo: langData.ProjectTwo.ButtonTo,
+        cardTo: langData.ProjectTwo.LinkTo,
         toNewTab: true,
         cardTitle: langData.ProjectTwo.Title,
         cardDescription: langData.ProjectTwo.Description,
         buttonText: langData.ProjectHighlightButtonText
+    }
+
+    const projectThree = {
+        cardTo: langData.ProjectThree.LinkTo,
+        toNewTab: false,
+        cardTitle: langData.ProjectThree.Title,
+        cardDescription: langData.ProjectThree.Description,
+        buttonText: null
     }
 
     return (
@@ -29,9 +37,9 @@ function ProjectsHighlights(langData) {
                         <h1>{langData.ProjectsHighlightsTitle}</h1>
                     </div>
                     <div className="projects__container">
-                        <Card {...projectTwo} />
-                        <Card {...mainProject} />
-                        <Card {...{ cardTo: "/", cardTitle: "Project C" }} />
+                        <Card {...projectTwo}/>
+                        <Card {...mainProject}/>
+                        <Card {...projectThree}/>
                     </div>
                 </div>
             </div>

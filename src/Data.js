@@ -43,12 +43,18 @@ const projectHighlightsEng = {
   ProjectHighlightButtonText: "More Info",
   ProjectOne: {
     Title: "AO Project",
-    Description: "Remastered version of an old Argentinean 2D online multiplayer game. Remade from the ground up using Unity and C#."
+    Description: "Remastered version of an old Argentinean 2D online multiplayer game. Remade from the ground up using Unity and C#.",
+    LinkTo: "/ao-project"
   },
   ProjectTwo: {
     Title: "Simple Networking",
     Description: "A simple server-client(s) TCP and UDP implementations to send and receive any type of messages. Based on my network implementation for my RPG Game Project.",
-    ButtonTo: simpleNetworkingGitLink
+    LinkTo: simpleNetworkingGitLink
+  },
+  ProjectThree: {
+    Title: "Project Z",
+    Description: "Coming Soon",
+    LinkTo: "/"
   }
 }
 
@@ -58,12 +64,17 @@ const projectHighlightsEs = {
   ProjectOne: {
     Title: "Proyecto AO",
     Description: "Versión remasterizada de un viejo juego 2D multijugador de Argentina. Rehecho por completo utilizando Unity y C#.",
-    LinkTo: "ao-project"
+    LinkTo: "/ao-project"
   },
   ProjectTwo: {
     Title: "Simple Networking",
     Description: "Una simple implementación de server y cliente(s) TCP y UDP para intercambiar cualquier tipo de mensajes. Basado en mi implementación de network de mi juego RPG.",
-    ButtonTo: simpleNetworkingGitLink
+    LinkTo: simpleNetworkingGitLink
+  },
+  ProjectThree: {
+    Title: "Proyecto Z",
+    Description: "Próximamente",
+    LinkTo: "/"
   }
 }
 
@@ -222,7 +233,7 @@ const projectAoEs = {
   }
 }
 
-export const appData = {
+export const AppData = {
   "en": {
     NavBar: navBarEng,
     Home: {

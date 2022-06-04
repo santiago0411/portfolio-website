@@ -1,5 +1,5 @@
 import React, { useLayoutEffect, useState } from "react";
-import {appData} from "../Data";
+import {AppData} from "../Data";
 
 const LangContext = React.createContext({
    lang: '',
@@ -41,7 +41,7 @@ export function LangProvider(props) {
         <LangContext.Provider value={{
             lang,
             switchLang,
-            currentLangData: appData[lang]
+            currentLangData: AppData[lang]
         }}>
             {props.children}
         </LangContext.Provider>
