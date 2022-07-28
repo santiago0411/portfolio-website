@@ -25,7 +25,7 @@ const navBarEs = {
 const homeIntroEng = {
   TopLine: "Santiago Carnuccio",
   Headline: "SOFTWARE DEVELOPER",
-  Description: "I'm a self-taught software developer from Buenos Aires, Argentina, currently living in Seoul, South Korea. I started programming when I was in High School as a hobby and as a result of my interest in computers. After realizing how much I enjoyed it I decided to make it into my profession. I speak fluent Spanish, English and advanced Korean.",
+  Description: "I'm a self-taught software developer from Buenos Aires, Argentina. I started programming when I was in High School as a hobby and as a result of my interest in computers. After realizing how much I enjoyed it I decided to make it into my profession. I speak fluent Spanish, English and advanced Korean.",
   ButtonLabel: "Learn More",
   ButtonRedirect: "/about",
 }
@@ -33,7 +33,7 @@ const homeIntroEng = {
 const homeIntroEs = {
   TopLine: "Santiago Carnuccio",
   Headline: "DESARROLLADOR DE SOFTWARE",
-  Description: "Soy un desarrollador de Buenos Aires, Argentina, viviendo actualmente en Seúl, Corea del Sur. La mayoría de mis conocimientos los aprendí por mi cuenta o trabajando con colegas. Comencé a programar cuando estaba en el secundario como un pasatiempo por mi gran interés en computación. Luego de darme cuenta lo mucho que me gusta decidí convertirlo en mi profesión. Hablo Español e Inglés fluido y Coreano avanzado.",
+  Description: "Soy un desarrollador de Buenos Aires, Argentina. La mayoría de mis conocimientos los aprendí por mi cuenta o trabajando con colegas. Comencé a programar cuando estaba en el secundario como un pasatiempo por mi gran interés en computación. Luego de darme cuenta lo mucho que me gusta decidí convertirlo en mi profesión. Hablo Español e Inglés fluido y Coreano avanzado.",
   ButtonLabel: "Ver Más",
   ButtonRedirect: "/about",
 }
@@ -119,7 +119,7 @@ const educationEng = {
   BulletPoints: [
       "San Martín de Tours Institute, Middle School, 2011-2013",
       "San Martín de Tours Institute, Economics and Administration High School, 2014-2016",
-      "Sungkyunkwan University, Korean Language Program, March-September 2022"
+      "Sungkyunkwan University, Korean Language Program, March-Julio 2022"
   ]
 }
 
@@ -127,7 +127,7 @@ const educationEs = {
   Heading: "Educación",
   BulletPoints: [
       "Instituto San Martín de Tours, Bachiller en Economía y Administración 2011-2016",
-      "Universidad de Sungkyunkwan, Programa de Idioma Coreano, Marzo-Septiembre 2022"
+      "Universidad de Sungkyunkwan, Programa de Idioma Coreano, Marzo-Julio 2022"
   ]
 }
 
@@ -206,7 +206,7 @@ const projectAoEng = {
   },
   Database: {
     Headline: "DATABASE",
-    Description: `The database module uses the library <a href=${sqlKataLink} target='_blank' rel='noopener noreferrer'><nobr>SqlKata</nobr></a> to abstract the database being used as well as provide query building functionality to avoid having to write the queries manually and avoid dependency to a specific SQL database. It also provides object mapping functionality wrapping the usage of another library <a href=${dapperLink} target='_blank' rel='noopener noreferrer'><nobr>Dapper</nobr></a>. Right after executing the query, the data fetched is automatically set inside an instance of the provided class or struct type through reflection.<br/>In this code example a list of type AOCharacterInfo, the size of which is the amount of rows fetched, is automatically allocated and each field of each element is mapped to the corresponding column from the database. After that the list is mapped to a Dictionary utilizing the CharacterId field as a key.`
+    Description: `The database module uses the <a href=${sqlKataLink} target='_blank' rel='noopener noreferrer'><nobr>SqlKata</nobr></a> library to abstract the database being used as well as provide query building functionality to avoid having to write queries manually and avoid dependency to a specific SQL database. It also provides object mapping functionality wrapping the usage of another library <a href=${dapperLink} target='_blank' rel='noopener noreferrer'><nobr>Dapper</nobr></a>. Right after executing the query, the fetched data is automatically set inside an instance of the provided class or struct type through reflection.<br/>In this code example a list of type AOCharacterInfo, the size of which is the amount of rows fetched, is automatically allocated and each field of each element is mapped to the corresponding column from the database. After that the list is mapped to a Dictionary utilizing the CharacterId field as a key.`
   }
 }
 
@@ -229,7 +229,7 @@ const projectAoEs = {
   },
   Database: {
     Headline: "BASE DE DATOS",
-    Description: `El módulo de base de datos utiliza la librería <a href=${sqlKataLink} target='_blank' rel='noopener noreferrer'><nobr>SqlKata</nobr></a> para abstraer el tipo de base de datos que se utiliza, así como también proveer funcionalidad para crear las queries automáticamente. También utilizando la librería <a href=${dapperLink} target='_blank' rel='noopener noreferrer'><nobr>Dapper</nobr></a> provee funcionalidad para mapear los datos extraídos de la base a objectos de C#, utilizando reflection, luego de ejecutar las queries.<br/> En este ejemplo una lista de tipo AOCharacterInfo, cuyo tamaño es la cantidad de filas traidas de la base, es automáticamente creada y cada campo de cada elemento es mapeado a la data de la columna correspondiente. Luego de eso la lista es convertida en un Dictionary utilizando el campo CharacterId como la clave.`
+    Description: `El módulo de base de datos utiliza la librería <a href=${sqlKataLink} target='_blank' rel='noopener noreferrer'><nobr>SqlKata</nobr></a> para abstraer el tipo de base de datos que se utiliza, así como también proveer funcionalidad para crear las queries automáticamente en tiempo de ejecución. También utilizando la librería <a href=${dapperLink} target='_blank' rel='noopener noreferrer'><nobr>Dapper</nobr></a> provee funcionalidad para mapear los datos extraídos de la base a objectos de C#, utilizando reflection, luego de ejecutar las queries.<br/> En este ejemplo una lista de tipo AOCharacterInfo, cuyo tamaño es la cantidad de filas traidas de la base, es automáticamente creada y cada campo de cada elemento es mapeado a la data de la columna correspondiente. Luego de eso la lista es convertida en un Dictionary utilizando el campo CharacterId como la clave.`
   }
 }
 
