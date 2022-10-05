@@ -1,4 +1,5 @@
 const simpleNetworkingGitLink = "https://github.com/santiago0411/SimpleNetworking";
+const cubelandGitLink = "https://github.com/santiago0411/Cubeland";
 const githubProfileLink = "https://github.com/santiago0411?tab=repositories";
 const linkedInLink = "https://www.linkedin.com/in/santiago-carnuccio-8a31401a6/";
 const engWikiAoLink = "https://en.wikipedia.org/wiki/Argentum_Online";
@@ -52,9 +53,9 @@ const projectHighlightsEng = {
     LinkTo: simpleNetworkingGitLink
   },
   ProjectThree: {
-    Title: "Project Z",
-    Description: "Coming Soon",
-    LinkTo: "/"
+    Title: "Cubeland",
+    Description: "[UNDER DEVELOPMENT] A pseudo Minecraft clone written from scratch using C++ and OpenGL.",
+    LinkTo: cubelandGitLink
   }
 }
 
@@ -72,9 +73,9 @@ const projectHighlightsEs = {
     LinkTo: simpleNetworkingGitLink
   },
   ProjectThree: {
-    Title: "Proyecto Z",
-    Description: "Próximamente",
-    LinkTo: "/"
+    Title: "Cubeland",
+    Description: "[EN DESARROLLO] Clon de Minecraft escrito en C++ utilizando OpenGL.",
+    LinkTo: cubelandGitLink
   }
 }
 
