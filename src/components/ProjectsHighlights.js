@@ -23,10 +23,10 @@ function ProjectsHighlights(langData) {
 
     const projectThree = {
         cardTo: langData.ProjectThree.LinkTo,
-        toNewTab: false,
+        toNewTab: true,
         cardTitle: langData.ProjectThree.Title,
         cardDescription: langData.ProjectThree.Description,
-        buttonText: null
+        buttonText: langData.ProjectHighlightButtonText
     }
 
     return (
