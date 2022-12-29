@@ -1,6 +1,7 @@
 const simpleNetworkingGitLink = "https://github.com/santiago0411/SimpleNetworking";
 const cubelandGitLink = "https://github.com/santiago0411/Cubeland";
 const githubProfileLink = "https://github.com/santiago0411?tab=repositories";
+const aoSourceLink = "https://github.com/santiago0411/AOSourceCode";
 const linkedInLink = "https://www.linkedin.com/in/santiago-carnuccio-8a31401a6/";
 const engWikiAoLink = "https://en.wikipedia.org/wiki/Argentum_Online";
 const esWikiAoLink = "https://es.wikipedia.org/wiki/Argentum_Online";
@@ -191,7 +192,7 @@ const languagesEs = {
 const projectAoEng = {
   Intro: {
     Headline: "AO PROJECT",
-    Description: `Remake of an old popular Argentinean game called <a href=${engWikiAoLink} target='_blank' rel='noopener noreferrer'><nobr>Argentum Online</nobr></a>.<br/> The original game is open source and was coded using Visual Basic 6.0. Thanks to this game I discovered the world of programming over 10 years ago, which led me many years later by interest and sheer curiosity to recreate this game from scratch using Unity and only keeping the original graphics. The game is an open-world RPG in which you can fight against creatures to level up your character as well as against other players.<br/>The source code of this project is not open to the public for the time being, although I am willing to disclose parts of it as per request.`,
+    Description: `Remake of an old popular Argentinean game called <a href=${engWikiAoLink} target='_blank' rel='noopener noreferrer'><nobr>Argentum Online</nobr></a>.<br/> The original game is open source and was coded using Visual Basic 6.0. Thanks to this game I discovered the world of programming over 10 years ago, which led me many years later by interest and sheer curiosity to recreate this game from scratch using Unity and only keeping the original graphics. The game is an open-world RPG in which you can fight against creatures to level up your character as well as against other players.<br/>You can find the source code <a href=${aoSourceLink} target='_blank' rel='noopener noreferrer'><nobr>here</nobr></a>.`,
     Img: "/images/AO.gif"
   },
   Network: {
@@ -214,7 +215,7 @@ const projectAoEng = {
 const projectAoEs = {
   Intro: {
     Headline: "PROYECTO AO",
-    Description: `Recreación de un viejo videojuego popular Argentino llamado <a href=${esWikiAoLink} target='_blank' rel='noopener noreferrer'><nobr>Argentum Online</nobr></a>.<br/> El juego original es open source y fue programado en Visual Basic 6.0. Gracias a este juego descubrí el mundo de la programación hace ya más de 10 años, lo cual luego de muchos años por interés y curiosidad me llevo a recrear el juego por completo utilizando Unity y solo manteniendo los gráficos originales. El juego es un RPG mundo abierto en el que puedes luchar tanto contra criaturas para mejorar tu nivel así también como contra otros jugadores. El código de este proyecto no está disponible al público por el momento, aunque puedo compartir partes si es pedido.`,
+    Description: `Recreación de un viejo videojuego popular Argentino llamado <a href=${esWikiAoLink} target='_blank' rel='noopener noreferrer'><nobr>Argentum Online</nobr></a>.<br/> El juego original es open source y fue programado en Visual Basic 6.0. Gracias a este juego descubrí el mundo de la programación hace ya más de 10 años, lo cual luego de muchos años por interés y curiosidad me llevo a recrear el juego por completo utilizando Unity y solo manteniendo los gráficos originales. El juego es un RPG mundo abierto en el que puedes luchar tanto contra criaturas para mejorar tu nivel así también como contra otros jugadores.<br/>Puedes encontrar el código de este proyecto <a href=${aoSourceLink} target='_blank' rel='noopener noreferrer'><nobr>aquí</nobr></a>.`,
     Img: "/images/AO.gif"
   },
   Network: {
